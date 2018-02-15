@@ -597,6 +597,7 @@ button.ui-button::-moz-focus-inner {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-size: 1.6em;
+	font-weight: 800;
 	color: #ff7e79;
 }
 .ui-dialog .ui-dialog-titlebar-close {
@@ -880,7 +881,7 @@ button.ui-button::-moz-focus-inner {
 .ui-tooltip {
 	color: #ff7e79 !important;
 	font-size: 1.9em !important;
-	font-weight: 600 !important;
+	font-weight: 800 !important;
 	padding: 8px;
 	position: absolute;
 	z-index: 9999;
