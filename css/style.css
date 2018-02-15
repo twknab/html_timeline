@@ -1,0 +1,412 @@
+/* Set body background color and font */
+
+body {
+  background-color: rgb(78, 78, 78);
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* background-position:center; */
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Set h1 tags */
+
+h1 {
+  font-weight: 600;
+  color: #ff7e79;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Set font weight for paragraph items only */
+
+p {
+  font-weight: 500;
+}
+
+/* Set width for logo, center logo and give it top padding */
+
+#logo {
+  width: 350px;
+  margin: 10px auto 0 auto;
+  z-index: 2000;
+}
+
+/* Reduces y-ward sprawl of timeline-wrapper */
+#timeline-wrapper {
+  position: relative;
+  bottom: 73px;
+}
+
+/* Sets up horizontal timeline using border */
+
+#timeline-line {
+  border-bottom: 4px solid #ff7e79;
+  vertical-align: middle;
+  position: relative;
+  top: 16.5em;
+  z-index: 1000;
+}
+
+/* Milestone events are inline as columns */
+
+li.event {
+  display: inline-block;
+  width: 18%;
+  margin-left: 1.0em;
+  vertical-align: top;
+}
+
+/* Every other milestone is transformed along the x axis */
+
+li.event:nth-child(even) {
+  transform: translate(0, 16em);
+  margin-top: 1.4em;
+}
+
+/* Sub events are inline and centered */
+
+li.sub-event {
+  display: inline;
+  margin-left: 1.0em;
+}
+
+.sub-event-dialog {
+  display: none;
+}
+
+/* Sub events are inlined centered and adjusted to be on timeline for desktop view */
+ul#sub-events {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  position: relative;
+  top: 34px;
+}
+
+a.sub-event-link {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 80px;
+  background-color: #ff7e79;
+  cursor:pointer;
+}
+
+a.sub-event-link:hover {
+  background-color: #ff5050;
+}
+
+.ui-dialog {
+  z-index: 1000 !important;
+}
+
+/* Hides the vertical timeline when in desktop mode */
+
+#timeline-line-2 {
+  display: none;
+}
+
+/* Sets milestone image to being inline with margin */
+
+.milestone-image {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+/* Adds founded effect to milestone images */
+
+.rounded {
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border: 5px solid #ff7e79;
+}
+
+/* Positions milestone 1 for desktop mode */
+
+#milestone1 {
+  position: relative;
+  bottom: 80px;
+  width: 185%;
+}
+
+/* Positions milestone 2 for desktop mode */
+
+#milestone2 {
+  position: relative;
+  right: 144px;
+  bottom: 30px;
+  width: 200%;
+}
+
+/* Positions milestone 3 for desktop mode */
+
+#milestone3 {
+  position: relative;
+  bottom: 25px;
+  right: 25px;
+  width: 170%;
+}
+
+/* Positions milestone 4 for desktop mode */
+
+#milestone4 {
+  position: relative;
+  bottom: 25px;
+  width: 170%;
+}
+
+/* Positions milestone 5 for desktop mode */
+
+#milestone5 {
+  position: relative;
+  bottom: 75px;
+  right: 96px;
+  width: 136%;
+}
+
+#connector1 {
+  position: relative;
+  right: 105px;
+  top: 69px;
+}
+
+#connector2 {
+  display: inline-block;
+  position: relative;
+  bottom: 226px;
+  right: 82px;
+}
+
+#sub-event1 {
+  margin-right:15%;
+  position: relative;
+  right: 70px;
+}
+
+#sub-event2 {
+  margin-right:10%;
+  position: relative;
+  right: 0px;
+}
+
+#sub-event5 {
+  /* margin-right:15%; */
+  position: relative;
+  left: 190px;
+}
+
+span .ui-dialog .ui-dialog-title {
+    font-size: 1.5em;
+    color: #ff7e79;
+  }
+
+/* --------- */
+
+/* SWITCH TO HORIZONTAL MODE FOR TABLETS AND MOBILE */
+
+/* --------- */
+
+/* TABLET ADJUSTMENT BREAK POINT */
+
+@media only screen and (max-width: 1033px) {
+  /* Changes event list items to display horizontally */
+  li.event {
+    display: block;
+    width: 100%;
+  }
+  /* Flips every other list item along y axis */
+  li.event:nth-child(even) {
+    transform: translate(120%, 0);
+    margin-top: 1.4em;
+  }
+  /* Moves timeline down slightly */
+  #timeline-wrapper {
+    bottom: 11px;
+  }
+  /* Hides horizontal timeline */
+  #timeline-line {
+    display: none;
+  }
+  /* Sets up timeline width for tablet / mobile mode */
+  #timeline {
+    display: inline-block;
+    width: 45%;
+    margin-right: 2.5em;
+  }
+  /* Positions vertical timeline using border for tablet / mobile mode */
+  #timeline-line-2 {
+    display: inline-block;
+    border-left: 4px solid #ff7e79;
+    vertical-align: top;
+    height: 180%;
+    position: absolute;
+    top: 3.1em;
+    z-index: -100;
+  }
+  /* Remove any special positioning or widths for milestones in tablet / mobile view */
+  #milestone1, #milestone2, #milestone3, #milestone4, #milestone5 {
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+  }
+  /* Hide connectors canvas elements unless drawn by JS */
+  #connector1 {
+    display: none;
+  }
+  #connector2 {
+    display: none;
+  }
+}
+
+/* Adjusts timeline positioning and every other list item padding for smaller screen sizes */
+
+@media only screen and (max-width: 826px) {
+  li.event:nth-child(even) {
+    margin-left: 10%;
+  }
+  #timeline-line-2 {
+    height: 190%;
+  }
+}
+
+/* Removes every other milestone from being flipped along y axis, and stacks them all in single column */
+
+@media only screen and (max-width: 670px) {
+  li.event:nth-child(even) {
+    transform: none;
+  }
+  #timeline-line-2 {
+    height: 180%;
+    top: 1.2em;
+  }
+  #timeline {
+    width: 80%;
+  }
+  li.event {
+    margin-left: 0px;
+    margin-top: 1.4em;
+    /* margin-bottom: 1.4em; */
+  }
+  li.event:nth-child(even) {
+    margin-left: 0px;
+  }
+  #milestone1, #milestone2, #milestone3, #milestone4, #milestone5 {
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
+/* Adjusts vertical timeline height for specific break point */
+
+@media only screen and (max-width: 458px) {
+  #timeline-line-2 {
+    height: 190%;
+  }
+}
+
+/* Shrinks logo down and adds margin beneath milestone images for break point */
+
+@media only screen and (max-width: 365px) {
+  #logo>img {
+    width: 250px;
+  }
+  #logo {
+    width: 250px;
+  }
+  .milestone-image {
+    margin-bottom: 15px;
+  }
+}
+
+/* Adjusts vertical timeline height for smallest screen sizes */
+
+/* Note: it might be best just to hide the timeline at very small screen sizes */
+
+@media only screen and (max-width: 334px) {
+  #timeline-line-2 {
+    height: 280%;
+  }
+}
+
+/* ------------------- */
+
+/* CUSTOM BREAK POINTS */
+
+/* ------------------- */
+
+/* Adds margin to timeline text for small screen size break point for minor viewing adjustment -- this may need to be tweaked if new content is added or removed */
+
+@media only screen and (max-width: 671px) and (min-width: 528px) {
+  #milestone1>p {
+    margin-bottom: 19%;
+  }
+}
+
+@media only screen and (max-width: 671px) and (min-width: 450px) {
+  #milestone3>p {
+    margin-bottom: 29%;
+  }
+}
+
+@media only screen and (max-width: 1442px) and (min-width: 1032px) {
+  #milestone5 {
+    bottom: 105px;;
+  }
+}
+
+@media only screen and (max-width: 1583px) and (min-width: 1357px) {
+  #connector1 {
+    top: 50px !important;
+  }
+}
+/*
+@media only screen and (max-width: 1658px) and (min-width: 1546px) {
+  #connector2 {
+    bottom: 246px !important;
+  }
+}
+
+@media only screen and (max-width: 1545px) and (min-width: 1404px) {
+  #connector2 {
+    bottom: 270px !important;
+    left: 93px !important;
+  }
+} */
+
+@media only screen and (max-width: 1356px) and (min-width: 1202px) {
+  #connector1 {
+    top: 29px !important;
+  }
+}
+
+@media only screen and (max-width: 1202px) and (min-width: 1201px) {
+  #connector1 {
+    top: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1163px) {
+  #connector1 {
+    top: 9px !important;
+  }
+}
+
+@media only screen and (max-width: 1162px) and (min-width: 1056px) {
+  #connector1 {
+    top: -11px !important;
+  }
+}
+
+@media only screen and (max-width: 1055px) and (min-width: 1032px) {
+  #connector1 {
+    top: -31px !important;
+    left: 69px !important;
+  }
+}
