@@ -128,7 +128,7 @@ li.event:nth-child(even) {
   position: relative;
   right: 144px;
   bottom: 30px;
-  width: 200%;
+  width: 210%;
 }
 
 /* Positions milestone 3 for desktop mode */
@@ -145,7 +145,8 @@ li.event:nth-child(even) {
 #milestone4 {
   position: relative;
   bottom: 25px;
-  width: 170%;
+  right: 20px;
+  width: 185%;
 }
 
 /* Positions milestone 5 for desktop mode */
@@ -156,6 +157,30 @@ li.event:nth-child(even) {
   right: 127px;
   width: 149%;
 }
+
+/* Adjust milestone paragraphs positioning: */
+#milestone1-paragraph {
+  position: relative;
+  top: 25px;
+}
+#milestone2-paragraph {
+  position: relative;
+  bottom: 10px;
+}
+#milestone3-paragraph {
+  position: relative;
+  top: 42px;
+}
+#milestone4-paragraph {
+  position: relative;
+  bottom: 15px;
+}
+#milestone5-paragraph {
+  position: relative;
+  top: 3px;
+}
+
+
 
 /* ----------------------- */
 
@@ -255,6 +280,48 @@ a.sub-event-link:hover {
 span .ui-dialog .ui-dialog-title {
   font-size: 1.5em;
   color: #ff7e79;
+}
+
+/* Adjustments for Very large screen sizes */
+@media only screen and (min-width: 1544px) {
+  #milestone1-paragraph {
+    top: 50px;
+  }
+  #milestone2-paragraph {
+    top: 30px;
+    bottom: 0px !important;
+  }
+  #milestone3-paragraph {
+    top: 60px;
+  }
+  #milestone4-paragraph {
+    top: 25px;
+  }
+  #milestone5-paragraph {
+    top: 45px;
+  }
+}
+@media only screen and (max-width: 1543px) and (min-width: 1289px) {
+  #milestone1-paragraph {
+    top: 45px;
+  }
+
+  #milestone2-paragraph {
+  top: 0px;
+  }
+
+  #milestone4-paragraph {
+    top: 8px;
+  }
+
+  #milestone5-paragraph {
+    top: 30px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1034px) {
+  #milestone3-paragraph {
+    top: 0px !important;
+  }
 }
 
 /* -------------------------------------------------------- */
