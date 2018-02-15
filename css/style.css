@@ -1,3 +1,9 @@
+/* ----------------------------- */
+
+/* ----- GENERAL STYLINGS ------ */
+
+/* ----------------------------- */
+
 /* Set body background color and font */
 
 body {
@@ -26,6 +32,12 @@ p {
   font-weight: 500;
 }
 
+/* ----------------- */
+
+/* ----- LOGO ------ */
+
+/* ----------------- */
+
 /* Set width for logo, center logo and give it top padding */
 
 #logo {
@@ -34,7 +46,14 @@ p {
   z-index: 2000;
 }
 
+/* --------------------- */
+
+/* ----- TIMELINE ------ */
+
+/* --------------------- */
+
 /* Reduces y-ward sprawl of timeline-wrapper */
+
 #timeline-wrapper {
   position: relative;
   bottom: 73px;
@@ -50,6 +69,18 @@ p {
   z-index: 1000;
 }
 
+/* Hides the vertical timeline when in desktop mode */
+
+#timeline-line-2 {
+  display: none;
+}
+
+/* ----------------------- */
+
+/* ----- MILESTONES ------ */
+
+/* ----------------------- */
+
 /* Milestone events are inline as columns */
 
 li.event {
@@ -64,51 +95,6 @@ li.event {
 li.event:nth-child(even) {
   transform: translate(0, 16em);
   margin-top: 1.4em;
-}
-
-/* Sub events are inline and centered */
-
-li.sub-event {
-  display: inline;
-  margin-left: 1.0em;
-}
-
-.sub-event-dialog {
-  display: none;
-}
-
-/* Sub events are inlined centered and adjusted to be on timeline for desktop view */
-ul#sub-events {
-  display: inline-block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  position: relative;
-  top: 34px;
-}
-
-a.sub-event-link {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border-radius: 80px;
-  background-color: #ff7e79;
-  cursor:pointer;
-}
-
-a.sub-event-link:hover {
-  background-color: #ff5050;
-}
-
-.ui-dialog {
-  z-index: 1000 !important;
-}
-
-/* Hides the vertical timeline when in desktop mode */
-
-#timeline-line-2 {
-  display: none;
 }
 
 /* Sets milestone image to being inline with margin */
@@ -150,7 +136,7 @@ a.sub-event-link:hover {
 #milestone3 {
   position: relative;
   bottom: 25px;
-  right: 25px;
+  right: 39px;
   width: 170%;
 }
 
@@ -167,9 +153,67 @@ a.sub-event-link:hover {
 #milestone5 {
   position: relative;
   bottom: 75px;
-  right: 96px;
-  width: 136%;
+  right: 127px;
+  width: 149%;
 }
+
+/* ----------------------- */
+
+/* ----- SUB-EVENTS ------ */
+
+/* ----------------------- */
+
+/* Sub events are inline and centered */
+
+li.sub-event {
+  display: inline;
+  margin-left: 1.0em;
+}
+
+.sub-event-dialog {
+  display: none;
+}
+
+/* Sub events are inlined centered and adjusted to be on timeline for desktop view */
+
+ul#sub-events {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  position: relative;
+  top: 34px;
+}
+
+/* Set link color for sub-event dots */
+
+a.sub-event-link {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 80px;
+  background-color: #ff7e79;
+  cursor: pointer;
+}
+
+/* Set hover color for sub-event dots */
+
+a.sub-event-link:hover {
+  background-color: #ff5050;
+}
+
+/* Make sub-event dialog box stay on top */
+
+.ui-dialog {
+  z-index: 1000 !important;
+}
+
+/* ----------------------- */
+
+/* ----- CONNECTORS ------ */
+
+/* ----------------------- */
 
 #connector1 {
   position: relative;
@@ -177,21 +221,27 @@ a.sub-event-link:hover {
   top: 69px;
 }
 
-#connector2 {
+/* #connector2 {
   display: inline-block;
   position: relative;
   bottom: 226px;
   right: 82px;
-}
+} */
+
+/* ----------------------- */
+
+/* ----- SUB EVENTS ------ */
+
+/* ----------------------- */
 
 #sub-event1 {
-  margin-right:15%;
+  margin-right: 15%;
   position: relative;
   right: 70px;
 }
 
 #sub-event2 {
-  margin-right:10%;
+  margin-right: 10%;
   position: relative;
   right: 0px;
 }
@@ -203,17 +253,21 @@ a.sub-event-link:hover {
 }
 
 span .ui-dialog .ui-dialog-title {
-    font-size: 1.5em;
-    color: #ff7e79;
-  }
+  font-size: 1.5em;
+  color: #ff7e79;
+}
 
-/* --------- */
+/* -------------------------------------------------------- */
 
-/* SWITCH TO HORIZONTAL MODE FOR TABLETS AND MOBILE */
+/* -- HERE BEGINS HORIZONTAL MODE FOR TABLETS AND MOBILE -- */
 
-/* --------- */
+/* -------------------------------------------------------- */
 
-/* TABLET ADJUSTMENT BREAK POINT */
+/* ----------------------------------------- */
+
+/* -- TABLET SPECIFIC CUSTOM BREAK POINTS -- */
+
+/* ----------------------------------------- */
 
 @media only screen and (max-width: 1033px) {
   /* Changes event list items to display horizontally */
@@ -303,6 +357,12 @@ span .ui-dialog .ui-dialog-title {
   }
 }
 
+/* ----------------------------------------- */
+
+/* -- MOBILE SPECIFIC CUSTOM BREAK POINTS -- */
+
+/* ----------------------------------------- */
+
 /* Adjusts vertical timeline height for specific break point */
 
 @media only screen and (max-width: 458px) {
@@ -335,11 +395,11 @@ span .ui-dialog .ui-dialog-title {
   }
 }
 
-/* ------------------- */
+/* ----------------------------------- */
 
-/* CUSTOM BREAK POINTS */
+/* -- MILESTONE CUSTOM BREAK POINTS -- */
 
-/* ------------------- */
+/* ----------------------------------- */
 
 /* Adds margin to timeline text for small screen size break point for minor viewing adjustment -- this may need to be tweaked if new content is added or removed */
 
@@ -357,15 +417,24 @@ span .ui-dialog .ui-dialog-title {
 
 @media only screen and (max-width: 1442px) and (min-width: 1032px) {
   #milestone5 {
-    bottom: 105px;;
+    bottom: 105px;
+    ;
   }
 }
+
+/* ---------------------------------------- */
+
+/* -- CONNECTOR LINE CUSTOM BREAK POINTS -- */
+
+/* ---------------------------------------- */
+/* Note: I know this ain't pretty, but it's how I've kept the connector lines in line with their various content panes as the browser window resizes.. */
 
 @media only screen and (max-width: 1583px) and (min-width: 1357px) {
   #connector1 {
     top: 50px !important;
   }
 }
+
 /*
 @media only screen and (max-width: 1658px) and (min-width: 1546px) {
   #connector2 {
