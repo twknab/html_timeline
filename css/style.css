@@ -32,6 +32,7 @@ p {
   font-weight: 500;
 }
 
+
 /* ----------------- */
 
 /* ----- LOGO ------ */
@@ -103,6 +104,7 @@ li.event:nth-child(even) {
   display: inline-block;
   margin-right: 15px;
   margin-bottom: 5px;
+  position: relative;
 }
 
 /* Adds founded effect to milestone images */
@@ -128,7 +130,7 @@ li.event:nth-child(even) {
   position: relative;
   right: 144px;
   bottom: 30px;
-  width: 210%;
+  width: 266%;
 }
 
 /* Positions milestone 3 for desktop mode */
@@ -165,7 +167,7 @@ li.event:nth-child(even) {
 }
 #milestone2-paragraph {
   position: relative;
-  bottom: 10px;
+  top: 25px;
 }
 #milestone3-paragraph {
   position: relative;
@@ -246,12 +248,12 @@ a.sub-event-link:hover {
   top: 69px;
 }
 
-/* #connector2 {
-  display: inline-block;
+#connector2 {
+  display: inline;
   position: relative;
   bottom: 226px;
   right: 82px;
-} */
+}
 
 /* ----------------------- */
 
@@ -287,6 +289,9 @@ span .ui-dialog .ui-dialog-title {
   #milestone1-paragraph {
     top: 50px;
   }
+  #milestone2 {
+    width: 236%;
+  }
   #milestone2-paragraph {
     top: 30px;
     bottom: 0px !important;
@@ -306,8 +311,11 @@ span .ui-dialog .ui-dialog-title {
     top: 45px;
   }
 
+  #milestone2 {
+  width: 236%;
+  }
   #milestone2-paragraph {
-  top: 0px;
+  top: 25px;
   }
 
   #milestone4-paragraph {
@@ -321,6 +329,9 @@ span .ui-dialog .ui-dialog-title {
 @media only screen and (max-width: 1200px) and (min-width: 1034px) {
   #milestone3-paragraph {
     top: 0px !important;
+  }
+  #milestone2-paragraph {
+    top: 5px !important;
   }
 }
 
@@ -489,6 +500,12 @@ span .ui-dialog .ui-dialog-title {
   }
 }
 
+@media only screen and (max-width: 1031px) and (min-width: 1033px) {
+  #milestone5-paragraph {
+    top: 20px;
+  }
+}
+
 /* ---------------------------------------- */
 
 /* -- CONNECTOR LINE CUSTOM BREAK POINTS -- */
@@ -501,20 +518,6 @@ span .ui-dialog .ui-dialog-title {
     top: 50px !important;
   }
 }
-
-/*
-@media only screen and (max-width: 1658px) and (min-width: 1546px) {
-  #connector2 {
-    bottom: 246px !important;
-  }
-}
-
-@media only screen and (max-width: 1545px) and (min-width: 1404px) {
-  #connector2 {
-    bottom: 270px !important;
-    left: 93px !important;
-  }
-} */
 
 @media only screen and (max-width: 1356px) and (min-width: 1202px) {
   #connector1 {
@@ -544,5 +547,17 @@ span .ui-dialog .ui-dialog-title {
   #connector1 {
     top: -31px !important;
     left: 69px !important;
+  }
+}
+
+@media only screen and (max-width: 2072px) {
+  #connector1 {
+    top: 86px !important;
+  }
+}
+
+@media only screen and (min-width: 194px) {
+  #connector2 {
+    bottom: 189px;
   }
 }

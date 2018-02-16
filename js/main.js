@@ -4,22 +4,22 @@ $(document).ready(function() {
   //******** CONNECTOR LINES ********//
   //*********************************//
   // Milestone Connector Line 1:
-  function drawConnector1() {
-    var c = document.getElementById("connector1");
-    var ctx = c.getContext("2d");
-
-    ctx.beginPath();
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.setLineDash([1, 5]);
-    ctx.strokeStyle = "#ff7e79";
-    ctx.moveTo(10, 20);
-    ctx.lineTo(10, 50);
-    ctx.lineTo(40, 50);
-    ctx.lineTo(40, 100);
-    ctx.stroke();
-  }
+  // function drawConnector1() {
+  //   var c = document.getElementById("connector1");
+  //   var ctx = c.getContext("2d");
+  //
+  //   ctx.beginPath();
+  //   ctx.lineWidth = 4;
+  //   ctx.lineCap = "round";
+  //   ctx.lineJoin = "round";
+  //   ctx.setLineDash([1, 5]);
+  //   ctx.strokeStyle = "#ff7e79";
+  //   ctx.moveTo(10, 20);
+  //   ctx.lineTo(10, 50);
+  //   ctx.lineTo(40, 50);
+  //   ctx.lineTo(40, 100);
+  //   ctx.stroke();
+  // }
   // Milestone Connector Line 2:
   // function drawConnector2() {
   //   var c = document.getElementById("connector2");
@@ -38,9 +38,27 @@ $(document).ready(function() {
   //   ctx.stroke();
   // }
   // Draw line defined above:
-  drawConnector1();
+  // drawConnector1();
   // drawConnector2();
 
+  //*********************************************//
+  //******** MILESTONE IMAGE FADE EFFECT ********//
+  //*********************************************//
+
+  $('.milestone-image').hover(function() {
+
+    $(this).animate({
+      opacity: 0.5,
+    }, 500, function() {
+      // Animation complete.
+    })
+
+  }, function() {
+    $(this).animate({
+      opacity: 1,
+    }, 500)
+
+  });
 
 
   //***********************************//
