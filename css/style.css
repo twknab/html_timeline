@@ -43,7 +43,7 @@ p {
 
 #logo {
   width: 350px;
-  margin: 10px auto 0 auto;
+  margin: 40px auto 0 auto;
   z-index: 2000;
 }
 
@@ -105,6 +105,7 @@ li.event:nth-child(even) {
   margin-right: 15px;
   margin-bottom: 5px;
   position: relative;
+  float: left;
 }
 
 /* Adds founded effect to milestone images */
@@ -114,6 +115,9 @@ li.event:nth-child(even) {
   -webkit-border-radius: 80px;
   -moz-border-radius: 80px;
   border: 5px solid #ff7e79;
+  box-shadow: 0px 1px 3px #10101080;
+  -webkit-box-shadow: 0px 1px 3px #10101080;
+  -moz-box-shadow: 0px 1px 3px #10101080;
 }
 
 /* Positions milestone 1 for desktop mode */
@@ -203,7 +207,7 @@ li.sub-event {
 
 /* Sub events are inlined centered and adjusted to be on timeline for desktop view */
 
-ul#sub-events {
+ul.sub-events {
   display: inline-block;
   text-align: center;
   margin-left: auto;
@@ -227,7 +231,7 @@ a.sub-event-link {
 /* Set hover color for sub-event dots */
 
 a.sub-event-link:hover {
-  background-color: #ff5050;
+  background-color: #ffdede;
 }
 
 /* Make sub-event dialog box stay on top */
@@ -248,32 +252,25 @@ a.sub-event-link:hover {
   top: 69px;
 }
 
-#connector2 {
-  display: inline;
-  position: relative;
-  bottom: 226px;
-  right: 82px;
-}
-
 /* ----------------------- */
 
 /* ----- SUB EVENTS ------ */
 
 /* ----------------------- */
 
-#sub-event1 {
+.sub-event1 {
   margin-right: 15%;
   position: relative;
   right: 70px;
 }
 
-#sub-event2 {
+.sub-event2 {
   margin-right: 10%;
   position: relative;
   right: 0px;
 }
 
-#sub-event5 {
+.sub-event5 {
   /* margin-right:15%; */
   position: relative;
   left: 190px;
@@ -365,6 +362,21 @@ span .ui-dialog .ui-dialog-title {
   /* Hides horizontal timeline */
   #timeline-line {
     display: none;
+    /* border-bottom: 0px; */
+  }
+  ul.sub-events {
+    display: block;
+    padding-left: 0px;
+    right: 15px;
+  }
+  ul.sub-events a {
+    left: 0px;
+    right: 0px;
+    margin-right: 0px;
+  }
+  li.sub-event {
+    display: block;
+    margin-left: 0px;
   }
   /* Sets up timeline width for tablet / mobile mode */
   #timeline {
@@ -377,7 +389,7 @@ span .ui-dialog .ui-dialog-title {
     display: inline-block;
     border-left: 4px solid #ff7e79;
     vertical-align: top;
-    height: 180%;
+    height: 109%;
     position: absolute;
     top: 3.1em;
     z-index: -100;
@@ -388,11 +400,25 @@ span .ui-dialog .ui-dialog-title {
     right: 0px;
     width: 100%;
   }
+  #milestone4-paragraph {
+    bottom: 0px;
+  }
+  #milestone5-paragraph {
+    top: 31px;
+  }
+  .milestone-image {
+    margin-bottom: 15px;
+    margin-right: 22px;
+  }
+  li.event:nth-child(even) img{
+    float: left;
+  }
+  li.event:nth-child(odd) img{
+    float: right;
+    margin-left: 15px;
+  }
   /* Hide connectors canvas elements unless drawn by JS */
   #connector1 {
-    display: none;
-  }
-  #connector2 {
     display: none;
   }
 }
@@ -404,7 +430,7 @@ span .ui-dialog .ui-dialog-title {
     margin-left: 10%;
   }
   #timeline-line-2 {
-    height: 190%;
+    height: 109%;
   }
 }
 
@@ -415,7 +441,7 @@ span .ui-dialog .ui-dialog-title {
     transform: none;
   }
   #timeline-line-2 {
-    height: 180%;
+    height: 107%;
     top: 1.2em;
   }
   #timeline {
@@ -433,6 +459,9 @@ span .ui-dialog .ui-dialog-title {
     bottom: 0px;
     width: 100%;
   }
+  span {
+    top: 0px !important;
+  }
 }
 
 /* ----------------------------------------- */
@@ -443,9 +472,24 @@ span .ui-dialog .ui-dialog-title {
 
 /* Adjusts vertical timeline height for specific break point */
 
+/* 527 */
+
+@media only screen and (max-width: 527px) {
+  span {
+    top: 0px !important;
+    display: inline-block;
+  }
+  .milestone-image {
+    float: none !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 @media only screen and (max-width: 458px) {
   #timeline-line-2 {
-    height: 190%;
+    height: 108%;
   }
 }
 
@@ -469,7 +513,7 @@ span .ui-dialog .ui-dialog-title {
 
 @media only screen and (max-width: 334px) {
   #timeline-line-2 {
-    height: 280%;
+    height: 104%;
   }
 }
 
@@ -553,11 +597,5 @@ span .ui-dialog .ui-dialog-title {
 @media only screen and (max-width: 2072px) {
   #connector1 {
     top: 86px !important;
-  }
-}
-
-@media only screen and (min-width: 194px) {
-  #connector2 {
-    bottom: 189px;
   }
 }
