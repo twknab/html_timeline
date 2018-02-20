@@ -32,7 +32,6 @@ p {
   font-weight: 500;
 }
 
-
 /* ----------------- */
 
 /* ----- LOGO ------ */
@@ -165,28 +164,31 @@ li.event:nth-child(even) {
 }
 
 /* Adjust milestone paragraphs positioning: */
+
 #milestone1-paragraph {
   position: relative;
   top: 25px;
 }
+
 #milestone2-paragraph {
   position: relative;
   top: 25px;
 }
+
 #milestone3-paragraph {
   position: relative;
   top: 42px;
 }
+
 #milestone4-paragraph {
   position: relative;
   bottom: 15px;
 }
+
 #milestone5-paragraph {
   position: relative;
   top: 3px;
 }
-
-
 
 /* ----------------------- */
 
@@ -246,11 +248,11 @@ a.sub-event-link:hover {
 
 /* ----------------------- */
 
-#connector1 {
+/* #connector1 {
   position: relative;
   right: 105px;
   top: 69px;
-}
+} */
 
 /* ----------------------- */
 
@@ -282,6 +284,7 @@ span .ui-dialog .ui-dialog-title {
 }
 
 /* Adjustments for Very large screen sizes */
+
 @media only screen and (min-width: 1544px) {
   #milestone1-paragraph {
     top: 50px;
@@ -303,26 +306,25 @@ span .ui-dialog .ui-dialog-title {
     top: 45px;
   }
 }
+
 @media only screen and (max-width: 1543px) and (min-width: 1289px) {
   #milestone1-paragraph {
     top: 45px;
   }
-
   #milestone2 {
-  width: 236%;
+    width: 236%;
   }
   #milestone2-paragraph {
-  top: 25px;
+    top: 25px;
   }
-
   #milestone4-paragraph {
     top: 8px;
   }
-
   #milestone5-paragraph {
     top: 30px;
   }
 }
+
 @media only screen and (max-width: 1200px) and (min-width: 1034px) {
   #milestone3-paragraph {
     top: 0px !important;
@@ -396,10 +398,10 @@ span .ui-dialog .ui-dialog-title {
   }
   /* Sub Events for Vertical Timeline */
   .sub-event1-vertical {
-    margin-top: 350px;
+    margin-top: 250px;
   }
   .sub-event2-vertical {
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .sub-event3-vertical {
     margin-top: 50px;
@@ -410,9 +412,12 @@ span .ui-dialog .ui-dialog-title {
   .sub-event5-vertical {
     margin-top: 200px;
   }
-
   /* Remove any special positioning or widths for milestones in tablet / mobile view */
-  #milestone1, #milestone2, #milestone3, #milestone4, #milestone5 {
+  #milestone1,
+  #milestone2,
+  #milestone3,
+  #milestone4,
+  #milestone5 {
     bottom: 0px;
     right: 0px;
     width: 100%;
@@ -427,17 +432,17 @@ span .ui-dialog .ui-dialog-title {
     margin-bottom: 15px;
     margin-right: 22px;
   }
-  li.event:nth-child(even) img{
+  li.event:nth-child(even) img {
     float: left;
   }
-  li.event:nth-child(odd) img{
+  li.event:nth-child(odd) img {
     float: right;
     margin-left: 15px;
   }
   /* Hide connectors canvas elements unless drawn by JS */
-  #connector1 {
+  /* #connector1 {
     display: none;
-  }
+  } */
 }
 
 /* Adjusts timeline positioning and every other list item padding for smaller screen sizes */
@@ -472,7 +477,11 @@ span .ui-dialog .ui-dialog-title {
   li.event:nth-child(even) {
     margin-left: 0px;
   }
-  #milestone1, #milestone2, #milestone3, #milestone4, #milestone5 {
+  #milestone1,
+  #milestone2,
+  #milestone3,
+  #milestone4,
+  #milestone5 {
     bottom: 0px;
     width: 100%;
   }
@@ -567,13 +576,297 @@ span .ui-dialog .ui-dialog-title {
   }
 }
 
+/* ----------------------------- */
+
+/* -- TIMELINE 2 BREAK POINTS -- */
+
+/* ----------------------------- */
+
+@media only screen and (max-width: 947px) and (min-width: 916px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 250px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 180px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 180px;
+  }
+}
+@media only screen and (max-width: 915px) and (min-width: 856px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 400px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 140px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 230px;
+  }
+}
+@media only screen and (max-width: 857px) and (min-width: 744px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 400px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 140px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 743px) and (min-width: 698px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 400px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 240px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 400px;
+  }
+}
+@media only screen and (max-width: 697px) and (min-width: 671px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 420px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 340px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 380px;
+  }
+}
+@media only screen and (max-width: 670px) and (min-width: 612px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 380px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 150px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 170px;
+  }
+}
+@media only screen and (max-width: 612px) and (min-width: 528px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 380px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 150px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 60px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 270px;
+  }
+}
+@media only screen and (max-width: 527px) and (min-width: 417px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 400px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 300px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 150px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 300px;
+  }
+}
+@media only screen and (max-width: 418px) and (min-width: 388px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 400px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 300px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 150px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 300px;
+  }
+}
+@media only screen and (max-width: 387px) and (min-width: 324px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 600px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 320px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 150px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 300px;
+  }
+}
+@media only screen and (max-width: 323px) and (min-width: 298px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 700px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 220px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 130px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 420px;
+  }
+}
+@media only screen and (max-width: 298px) {
+  /* Adjust sub-event heights */
+
+  .sub-event1-vertical {
+    margin-top: 700px;
+  }
+
+  .sub-event2-vertical {
+    margin-top: 280px;
+  }
+
+  .sub-event3-vertical {
+    margin-top: 130px;
+  }
+
+  .sub-event4-vertical {
+    margin-top: 20px;
+  }
+
+  .sub-event5-vertical {
+    margin-top: 440px;
+  }
+}
+
 /* ---------------------------------------- */
 
 /* -- CONNECTOR LINE CUSTOM BREAK POINTS -- */
 
 /* ---------------------------------------- */
-/* Note: I know this ain't pretty, but it's how I've kept the connector lines in line with their various content panes as the browser window resizes.. */
 
+/* Note: I know this ain't pretty, but it's how I've kept the connector lines in line with their various content panes as the browser window resizes.. */
+/* 
 @media only screen and (max-width: 1583px) and (min-width: 1357px) {
   #connector1 {
     top: 50px !important;
@@ -615,4 +908,4 @@ span .ui-dialog .ui-dialog-title {
   #connector1 {
     top: 86px !important;
   }
-}
+} */

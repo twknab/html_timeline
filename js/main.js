@@ -152,8 +152,7 @@ $(document).ready(function() {
   //******** TOOL TIPS ********//
   //***************************//
 
-  // Turn on tooltips:
-  $( document ).tooltip();
+  // Turn on tooltips for horizontal layout only:
   // Set tool tip position for sub-event1:
   $( ".sub-event1" ).tooltip({
     position: { my: "left+15 center", at: "right center" },
