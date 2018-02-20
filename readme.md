@@ -4,6 +4,5 @@ This project attempts to recreate a mockup image using HTML, CSS and JavaScript 
 
 
 ## To Do:
-+ Add Sub-Event Dots to Vertical Timeline. (< 1 hour)
-
-Finish this project in 4-5 hours max.
++ Change dialogs for vertical to jQuery mobile Dialogs. Or, find some other solution to the width problem with mobile.
++ If you can get to this point, this can be a stopping point for client review.
