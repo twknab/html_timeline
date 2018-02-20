@@ -392,8 +392,25 @@ span .ui-dialog .ui-dialog-title {
     height: 109%;
     position: absolute;
     top: 3.1em;
-    z-index: -100;
+    z-index: 1000;
   }
+  /* Sub Events for Vertical Timeline */
+  .sub-event1-vertical {
+    margin-top: 350px;
+  }
+  .sub-event2-vertical {
+    margin-top: 100px;
+  }
+  .sub-event3-vertical {
+    margin-top: 50px;
+  }
+  .sub-event4-vertical {
+    margin-top: 10px;
+  }
+  .sub-event5-vertical {
+    margin-top: 200px;
+  }
+
   /* Remove any special positioning or widths for milestones in tablet / mobile view */
   #milestone1, #milestone2, #milestone3, #milestone4, #milestone5 {
     bottom: 0px;
