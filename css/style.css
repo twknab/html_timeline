@@ -312,6 +312,11 @@ span .ui-dialog .ui-dialog-title {
     top: 45px;
   }
 }
+@media only screen and (min-width: 1530px) {
+  #timeline-wrapper {
+    top: 33px;
+  }
+}
 
 @media only screen and (max-width: 1543px) and (min-width: 1289px) {
   #milestone1-paragraph {
