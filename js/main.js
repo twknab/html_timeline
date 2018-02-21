@@ -59,8 +59,13 @@ $(document).ready(function() {
   while (i <= 5) {
     $(`.sub-event-dialog${i}`).dialog({
       autoOpen: false,
-      height: 350,
-      width: 500,
+      height: 'auto',
+      width: 'auto',
+      fluid: true,
+      modal: true,
+      open: function () {
+        $('.ui-widget-overlay').addClass('custom-overlay');
+      } ,
       show: {
         effect: "fade",
         duration: 400
@@ -79,8 +84,10 @@ $(document).ready(function() {
     });
     $(`.sub-event-dialog${i}-vertical`).dialog({
       autoOpen: false,
-      height: 350,
-      width: 500,
+      height: 'auto',
+      width: 'auto',
+      modal: true,
+      fluid: true,
       show: {
         effect: "fade",
         duration: 400

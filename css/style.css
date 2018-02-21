@@ -242,6 +242,12 @@ a.sub-event-link:hover {
   z-index: 1000 !important;
 }
 
+/* Customize dialog overlay */
+.ui-widget-overlay.custom-overlay {
+  background-color: #282D30;
+  opacity: 0.9;
+}
+
 /* ----------------------- */
 
 /* ----- CONNECTORS ------ */
