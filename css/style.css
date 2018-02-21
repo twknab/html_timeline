@@ -92,6 +92,7 @@ p {
 }
 #vertical-alert-msg > p {
   font-size: 1.1em;
+  color: rgba(245, 245, 245, 0.85);
 }
 /* #vertical-alert-ico {
   font-size: 1.3em;
