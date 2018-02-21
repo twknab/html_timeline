@@ -163,32 +163,37 @@ $(document).ready(function() {
   // Set tool tip position for sub-event1:
   $( ".sub-event1" ).tooltip({
     position: { my: "left+15 center", at: "right center" },
-    show: { effect: "blind", duration: 300 }
+    show: { effect: "blind", duration: 300 },
+    track: true,
   });
   // Set tool tip position for sub-event2:
   $( ".sub-event2" ).tooltip({
     position: { my: "left+15 center", at: "right center" },
-    show: { effect: "blind", duration: 300 }
+    show: { effect: "blind", duration: 300 },
+    track: true,
   });
   // Set tool tip position for sub-event3:
   $( ".sub-event3" ).tooltip({
     position: { my: "right-15 bottom", at: "top center" },
-    show: { effect: "blind", duration: 300 }
+    show: { effect: "blind", duration: 300 },
+    track: true,
   });
   // Set tool tip position for sub-event4:
   $( ".sub-event4" ).tooltip({
     position: { my: "left+15 bottom", at: "top center" },
-    show: { effect: "blind", duration: 300 }
+    show: { effect: "blind", duration: 300 },
+    track: true,
   });
   // Set tool tip position for sub-event5:
   $( ".sub-event5" ).tooltip({
     position: { my: "left+15 center", at: "right center" },
-    show: { effect: "blind", duration: 300 }
+    show: { effect: "blind", duration: 300 },
+    track: true,
   });
+  
   // Hide tooltips for dialogs:
   $( "[title|='Close']" ).tooltip({
     disabled: true,
   });
-
 
 }); // end doc ready
